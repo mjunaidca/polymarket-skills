@@ -179,6 +179,23 @@ source /home/verticalclaw/.venv/bin/activate && python polymarket-strategy-advis
 
 Output: JSON array of trade recommendations sorted by expected value.
 
+### Backtest Engine (`scripts/backtest.py`)
+
+Comprehensive performance analysis and live-readiness assessment:
+
+```bash
+source /home/verticalclaw/.venv/bin/activate && python polymarket-strategy-advisor/scripts/backtest.py
+```
+
+Live-readiness check only:
+```bash
+source /home/verticalclaw/.venv/bin/activate && python polymarket-strategy-advisor/scripts/backtest.py --live-check
+```
+
+Output: total return, win rate, Sharpe ratio, max drawdown, profit factor,
+per-strategy breakdown, and READY/NOT READY assessment against CLAUDE.md
+prerequisites (20+ trades, >55% win rate, Sharpe >0.5, drawdown <15%).
+
 ### Daily Performance Review (`scripts/daily_review.py`)
 
 Analyzes paper trading history and suggests improvements:

@@ -52,6 +52,13 @@ python ~/.agents/skills/polymarket-paper-trader/scripts/portfolio_report.py
 python ~/.agents/skills/polymarket-paper-trader/scripts/portfolio_report.py --json
 ```
 
+### Portfolio Health Check (Session Start)
+```bash
+python ~/.agents/skills/polymarket-paper-trader/scripts/health_check.py
+python ~/.agents/skills/polymarket-paper-trader/scripts/health_check.py --json
+```
+Runs the full session-start workflow in one command: loads portfolio, fetches live prices, updates DB, calculates drawdown, checks stop losses, evaluates all risk limits. Returns GREEN/YELLOW/RED status.
+
 ## Finding Token IDs
 
 Token IDs come from the Polymarket Gamma API. To find them for a market:

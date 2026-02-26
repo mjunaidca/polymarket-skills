@@ -1,0 +1,77 @@
+{
+  "skills": [
+    {
+      "name": "polymarket-scanner",
+      "description": "Use this skill whenever the user wants to browse, search, scan, or explore Polymarket prediction markets. Includes finding markets by topic, checking prices and order books, viewing volumes, and fetching live data.",
+      "files": [
+        "SKILL.md",
+        "references/api-guide.md",
+        "references/market-types.md",
+        "scripts/get_orderbook.py",
+        "scripts/get_prices.py",
+        "scripts/scan_markets.py"
+      ]
+    },
+    {
+      "name": "polymarket-analyzer",
+      "description": "Use this skill whenever the user wants to find trading opportunities, detect arbitrage, analyze a market, perform edge detection, find mispricing, do probability analysis, evaluate orderbook depth, or find momentum signals.",
+      "files": [
+        "SKILL.md",
+        "references/fee-model.md",
+        "references/viable-strategies.md",
+        "scripts/analyze_orderbook.py",
+        "scripts/correlation_tracker.py",
+        "scripts/find_edges.py",
+        "scripts/momentum_scanner.py"
+      ]
+    },
+    {
+      "name": "polymarket-monitor",
+      "description": "Use this skill whenever the user wants to monitor, watch, or track Polymarket prediction market prices over time. Includes setting up price alerts, watching for significant price movements, tracking spread changes, and monitoring volume spikes.",
+      "files": [
+        "SKILL.md",
+        "references/monitoring-guide.md",
+        "scripts/monitor_prices.py",
+        "scripts/watch_market.py"
+      ]
+    },
+    {
+      "name": "polymarket-paper-trader",
+      "description": "Use this skill whenever the user wants to paper trade, simulate trades, practice trading, backtest strategies, manage a virtual portfolio, or track simulated P&L on Polymarket prediction markets. This is the core trading engine with zero financial risk.",
+      "files": [
+        "SKILL.md",
+        "references/paper-trading-guide.md",
+        "references/risk-rules.md",
+        "scripts/execute_paper.py",
+        "scripts/health_check.py",
+        "scripts/paper_engine.py",
+        "scripts/portfolio_report.py"
+      ]
+    },
+    {
+      "name": "polymarket-strategy-advisor",
+      "description": "Use this skill whenever the user wants trading strategy advice, trade recommendations, portfolio guidance, or prediction market analysis that leads to actionable trades. Covers position sizing, Kelly criterion, risk management, and daily review.",
+      "files": [
+        "SKILL.md",
+        "references/decision-framework.md",
+        "references/viable-strategies.md",
+        "scripts/advisor.py",
+        "scripts/backtest.py",
+        "scripts/daily_review.py"
+      ]
+    },
+    {
+      "name": "polymarket-live-executor",
+      "description": "Use this skill when the user wants to execute a real trade on Polymarket, place a live order, go live, buy or sell on Polymarket, check real positions, or manage a live trading wallet. CRITICAL: Executes REAL trades with REAL money requiring explicit human confirmation.",
+      "files": [
+        "SKILL.md",
+        ".env.example",
+        "references/live-trading-checklist.md",
+        "references/security.md",
+        "scripts/check_positions.py",
+        "scripts/execute_live.py",
+        "scripts/setup_wallet.py"
+      ]
+    }
+  ]
+}

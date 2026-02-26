@@ -33,18 +33,34 @@ safety controls on every operation.
 
 ## Setup
 
-Before using this skill, the user must:
+Use the setup wizard to configure everything:
 
-1. Create a burner wallet (see `references/security.md`)
-2. Fund it with a small amount of USDC on Polygon
-3. Set environment variables:
-   ```bash
-   export POLYMARKET_PRIVATE_KEY="0x..."    # Burner wallet only!
-   export POLYMARKET_CONFIRM=true           # Safety gate
-   export POLYMARKET_MAX_SIZE=10            # Max $ per trade (default: 10)
-   export POLYMARKET_DAILY_LOSS_LIMIT=50    # Max daily loss (default: 50)
-   ```
-4. Review the `references/live-trading-checklist.md` before any live trade
+```bash
+# Step 1: Create a burner wallet
+python scripts/setup_wallet.py --create
+
+# Step 2: Fund wallet with USDC on Polygon (manually via MetaMask/bridge)
+
+# Step 3: Copy and fill in .env
+cp .env.example .env && chmod 600 .env
+# Edit .env with your private key and limits
+
+# Step 4: Verify everything is configured
+python scripts/setup_wallet.py --verify
+
+# Step 5: Check on-chain balance
+python scripts/setup_wallet.py --check-balance
+```
+
+Or set environment variables manually:
+```bash
+export POLYMARKET_PRIVATE_KEY="0x..."    # Burner wallet only!
+export POLYMARKET_CONFIRM=true           # Safety gate
+export POLYMARKET_MAX_SIZE=10            # Max $ per trade (default: 10)
+export POLYMARKET_DAILY_LOSS_LIMIT=50    # Max daily loss (default: 50)
+```
+
+Review the `references/live-trading-checklist.md` before any live trade.
 
 ## Available Scripts
 

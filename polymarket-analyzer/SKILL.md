@@ -59,6 +59,21 @@ python scripts/momentum_scanner.py
 python scripts/momentum_scanner.py --min-volume 10000 --limit 300
 ```
 
+### 4. Correlation Tracker (`scripts/correlation_tracker.py`)
+
+Detect hidden correlated exposure in your portfolio:
+
+- Groups positions by topic (crypto, politics, sports, geopolitics, etc.)
+- Detects shared qualifiers ("insider trading", "FIFA World Cup", etc.)
+- Warns when correlated clusters exceed concentration limits
+- Outputs diversification score (0-100)
+
+```bash
+python scripts/correlation_tracker.py
+python scripts/correlation_tracker.py --json
+python scripts/correlation_tracker.py --threshold 0.10
+```
+
 ## Workflow
 
 1. Run `find_edges.py` to scan for arbitrage across all active markets
